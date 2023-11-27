@@ -19,29 +19,29 @@ int traverse(listint_t *node, listint_t *head, int depth)
 	else
 		return (traverse(node, head, --depth));
 }
-	
+
 
 /**
  * check_cycle1 - a function that checks if a singly linked
  * list has a cycle in it
  * @node: node in the singlye linked list
  * @list: the singly linked list head
+ * @depth: depth in the singly linked list
  * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 
 int check_cycle1(listint_t *node, listint_t *list, int depth)
 {
-	if (node -> next == NULL)
+	if (node->next == NULL)
 		return (0);
-	else if (node == node -> next)
+	else if (node == node->next)
+		return (1);
+
+	if (traverse(node, list, depth - 1))
 		return (1);
 	else
-	{
-		if (traverse(node, list, depth - 1))
-			return (1);
-		else
-			return (check_cycle1(node -> next, list, ++depth));
-	}
+		return (check_cycle1(node->next, list, ++depth));
+
 }
 
 
