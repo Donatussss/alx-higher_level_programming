@@ -9,4 +9,7 @@ if __name__ == '__main__':
     if sys.argv[2] not in '+-*/':
         print('Unknown operator. Available operators: +, -, * and /')
         sys.exit(1)
-    print('{} {} {} = {}'.format(*sys.argv[1:], op_dict[sys.argv[2]](int(sys.argv[1]), int(sys.argv[3]))))
+    print(
+            '{} {} {} = {}'.format(*sys.argv[1:],
+                                   op_dict[sys.argv[2]]
+                                   (int(sys.argv[1]), int(sys.argv[3]))))
