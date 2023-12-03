@@ -12,9 +12,10 @@ You are not allowed to import any module
 You are not allowed to use try/except
 """
 
+
 def replace_in_list(my_list, idx, element):
-    if idx < 0 or idx >= len(my_list):
-        return my_list
     temp = my_list[:]
+    if idx < 0 or idx >= len(my_list):
+        return temp
     temp[idx] = element
     return temp
