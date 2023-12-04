@@ -49,7 +49,7 @@ int is_palindrome_check(listint_t **head, listint_t *current)
 int is_palindrome(listint_t **head)
 {
 	listint_t *head_copy = *head;
-	if (head == NULL || (*head)->next == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
 	else
