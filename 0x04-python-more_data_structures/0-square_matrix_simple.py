@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-square_matrix_simple -a function that computes the 
+square_matrix_simple -a function that computes the
 square value of all integers of a matrix
 matrix is a 2 dimensional array
 Returns a new matrix:
