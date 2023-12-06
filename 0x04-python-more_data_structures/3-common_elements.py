@@ -11,7 +11,7 @@ def common_elements(set_1, set_2):
     if set_1 is None or set_2 is None:
         return set()
     larger_set = set_1 if len(set_1) > len(set_2) else set_2
-    other_set = set_1 if larger_set == set_2 else set_1
+    other_set = set_1 if larger_set == set_2 else set_2
 
     for i in larger_set:
         if i in other_set:
