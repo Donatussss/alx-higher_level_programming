@@ -8,6 +8,8 @@ You are not allowed to import any module
 
 def common_elements(set_1, set_2):
     out_set = set()
+    if set_1 is None or set_2 is None:
+        return set()
     larger_set = set_1 if len(set_1) > len(set_2) else set_2
     other_set = set_1 if larger_set == set_2 else set_1
 
