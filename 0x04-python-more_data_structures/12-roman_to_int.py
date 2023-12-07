@@ -14,7 +14,7 @@ def roman_to_int(roman_string):
     rev = roman_string[::-1]
     num = None
     for id_c, c in enumerate(rev):
-        if c is not in num_dict:
+        if c  not in num_dict:
             return 0
         if num is None:
             num = num_dict[c]
