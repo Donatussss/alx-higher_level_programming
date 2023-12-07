@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if roman_string is None or type(roman_string) is not str:
-        return None
+        return 0
     num_dict = {
             'I': 1,
             'V': 5,
@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
             'M': 1000
             }
     rev = roman_string[::-1]
-    num = None
+    num = None if len(roman_string) > 0 else 0
     for id_c, c in enumerate(rev):
         if c not in num_dict:
             return 0
