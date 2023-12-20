@@ -39,7 +39,7 @@ class Square:
             the area of the square
         """
         return self.__size ** 2
-    
+
     def __eq__(self, other):
         """Define the == comparision to a Square."""
         return self.area() == other.area()
